@@ -11,9 +11,11 @@ print("메시지를 입력하세요. (종료시 'exit' 입력)")
 
 while True:
     msg = input("YOU: ")
-    if msg == 'exit':
+    if msg.lower() == 'exit':
         break
 
     data = {'message': msg, 'time': time.time()}
     # TODO
     producer
+
+print("채팅 종료")
