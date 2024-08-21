@@ -1,5 +1,5 @@
 # kchat
-Python chat program
+Python chat program using Apache Kafka
 
 ### Test
 #### KAFKA Producer
