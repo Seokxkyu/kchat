@@ -13,7 +13,7 @@ start = time.time()
 for i in tqdm(range(10)):
     data = {'str': 'value' + str(i)}
     producer.send('topic1', value=data)
-    time.sleep(1)
+    time.sleep(0.1)
     producer.flush()
 
 end = time.time()
