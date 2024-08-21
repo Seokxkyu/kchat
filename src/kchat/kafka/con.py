@@ -26,7 +26,7 @@ consumer = KafkaConsumer(
         # auto_offset_reset='latest',
         # auto_offset_reset='earliest' if saved_offset is None else 'none',
         group_id="fbi",
-        enable_auto_commit=True,
+        enable_auto_commit=False,
 )
 
 print('[Start] get consumer')
