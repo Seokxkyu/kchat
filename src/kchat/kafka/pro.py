@@ -1,6 +1,7 @@
 from kafka import KafkaProducer
 import time
 import json
+from tqdm import tqdm
 
 producer = KafkaProducer(
         bootstrap_servers=['localhost:9092'],
@@ -9,9 +10,10 @@ producer = KafkaProducer(
 
 start = time.time()
 
-for i in range(10):
+for i in tqdm(range(10)):
     data = {'str': 'value' + str(i)}
     producer.send('topic1', value=data)
+    time.sleep(1)
     producer.flush()
 
 end = time.time()
