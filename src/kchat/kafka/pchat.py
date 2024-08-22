@@ -5,7 +5,8 @@ import json
 
 producer = KafkaProducer(
         # TODO
-        bootstrap_servers=['localhost:9092'],
+        # bootstrap_servers=['localhost:9092'],
+        bootstrap_servers = ['ec2-43-203-182-252.ap-northeast-2.compute.amazonaws.com:9092'],
         value_serializer=lambda x:json.dumps(x).encode('utf-8')
 )
 
